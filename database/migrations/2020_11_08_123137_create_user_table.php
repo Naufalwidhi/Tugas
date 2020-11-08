@@ -13,10 +13,11 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('data', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
             $table->string('password');
+            $table->timestamp();
         });
     }
 
@@ -27,6 +28,6 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('data');
     }
 }

@@ -29,12 +29,12 @@ class Controller extends BaseController
         ], 201);
     }
 
-    public function userupdate(Request $request, $id){
+    public function update(Request $request, $id){
         try {
             $data = data::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json([
-                'message' => 'user not found'
+                'message' => 'data not found'
             ], 404);
         }
 
@@ -45,7 +45,7 @@ class Controller extends BaseController
 
         return response()->json([
             'updated' => true,
-            'data' => $user
+            'data' => $data
         ], 200);
     }
 

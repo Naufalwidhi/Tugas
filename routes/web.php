@@ -19,7 +19,7 @@ $router->get('/key', function () {
 });
 $router->get('/user', 'Controller@index');
 $router->post('/user', 'Controller@useradd');
-$router->put('/user/{id}', 'Controller@userupdate');
+$router->put('/user/{id}', 'Controller@update');
 $router->delete('/user/{id}', 'Controller@userdestroy');
 
 
