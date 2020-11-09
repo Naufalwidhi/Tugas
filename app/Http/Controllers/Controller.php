@@ -13,6 +13,14 @@ class Controller extends BaseController
         return data::all();
     }
 
+    public function test(){
+        return response()->json([
+            'date' => Carbon::now(),
+            'timezone_type' => '3',
+            'timezone' => 'UTC'
+        ]);
+    }
+
     public function useradd(Request $request){
         $this->validate($request, [
             'nama' => 'required',

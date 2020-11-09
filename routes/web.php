@@ -17,6 +17,7 @@ $router->get('/', function () use ($router) {
 $router->get('/key', function () {
     return str_random(32);
 });
+$router->get('/test', 'Controller@test');
 $router->get('/user', 'Controller@index');
 $router->post('/user', 'Controller@useradd');
 $router->put('/user/{id}', 'Controller@update');
